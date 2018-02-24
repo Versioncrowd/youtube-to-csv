@@ -2,7 +2,6 @@
 document.querySelector('#keyform').addEventListener('submit', (event) => {
   event.preventDefault();
   var CLIENT_ID = document.getElementById('key-input').value;
-  console.log(CLIENT_ID);
 
   // Array of API discovery doc URLs for APIs used by the quickstart
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];

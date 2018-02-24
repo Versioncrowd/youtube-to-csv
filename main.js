@@ -22,8 +22,8 @@ document.querySelector('#urlform').addEventListener('submit', ((event) => {
     var p = document.getElementById('resultEl');
     var videoInfo = 'This video\'s ID is ' + video.id + '. ' +
                     'Its title is \'' + video.snippet.localized.title + ', ' +
-                    'and it has ' + video.statistics.viewCount + ' views.' + 
-                    'and' + video.statistics.likeCount + ' likes';
+                    'and it has ' + video.statistics.viewCount + ' views ' + 
+                    'and ' + video.statistics.likeCount + ' likes';
     p.innerHTML = '';
     p.innerHTML = videoInfo;
   }
