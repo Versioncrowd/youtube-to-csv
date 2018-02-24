@@ -1,7 +1,5 @@
       // Client ID and API key from the Developer Console
-document.querySelector('#keyform').addEventListener('submit', (event) => {
-  event.preventDefault();
-  var CLIENT_ID = document.getElementById('key-input').value;
+  var CLIENT_ID = 'YOUR_KEY_GOES_HERE';
 
   // Array of API discovery doc URLs for APIs used by the quickstart
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
@@ -11,10 +9,8 @@ document.querySelector('#keyform').addEventListener('submit', (event) => {
   var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
   var authorizeButton = document.getElementById('authorize-button');
-  var authorizeLegend = document.getElementById('authorize-legend');
   var signoutButton = document.getElementById('signout-button');
-  var submitKeyButton = document.getElementById('submitkey-button');
-  var keyInput = document.getElementById('key-input');
+  var reminder = document.getElementById('reminder');
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -52,15 +48,9 @@ document.querySelector('#keyform').addEventListener('submit', (event) => {
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          submitKeyButton.style.display = 'none';
-          keyInput.style.display = 'none';
-          authorizeLegend.style.display = 'none';
         } else {
           authorizeButton.style.display = 'block';
-          authorizeLegend.style.display = 'block';
           signoutButton.style.display = 'none';
-          submitKeyButton.style.display = 'block';
-          keyInput.style.display = 'block';
         }
       }
 
@@ -78,8 +68,6 @@ document.querySelector('#keyform').addEventListener('submit', (event) => {
         gapi.auth2.getAuthInstance().signOut();
       }
 
-      handleClientLoad();
-});
       
 
       

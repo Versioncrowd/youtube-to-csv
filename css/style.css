@@ -9,6 +9,10 @@
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#resultEl {
+    font-size: 10px;
+}
+
 .form-style legend {
     font-size: 1.4em;
     margin-bottom: 10px;
