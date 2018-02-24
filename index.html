@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YouTube Data API Quickstart</title>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="form-style">
+        <form id="keyform">
+            <legend><span class="number">1</span> Insert Key here</legend>
+            <input type="text" name="field1" id="key-input">
+            <button id="submitkey-button" type="submit">Submit Key</button>
+            <p id="authorize-legend" style="display: none;"><span class="number">1a) </span>Please sign into the Google Account associated to your key to get authorization!</p>
+            <button id="authorize-button" style="display: none;">Authorize</button>
+            <button id="signout-button" style="display: none;">Sign Out</button>
+        </form>
+    </div>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <div class="form-style">
+        <form id="urlform">
+            <legend><span class="number">2</span> Youtube Video URL</legend>
+            <input type="text" name="field1" placeholder="https://www.youtube.com/watch?v=DNKdP_k6QOs" id="videourl">
+            <input type="submit" value="Download .CSV" />
+        </form>
+    </div>
+    <p id="resultEl"></p>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <script type="text/javascript" src="googlesetup.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
